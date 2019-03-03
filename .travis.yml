@@ -3,5 +3,13 @@ sudo: required
 dist: xenial  
 mono: none
 dotnet: 2.2
+before_script:
+  - chmod a+x ./deploy.sh
 script:
   - dotnet build
+deploy:
+  - provider: script
+    script: ./deploy.sh $TRAVIS_TAG $DOCKER_USERNAME $DOCKER_PASSWORD
+    skip_cleanup: true
+    on:
+      tags: true
