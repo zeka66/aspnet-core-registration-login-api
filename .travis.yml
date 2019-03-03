@@ -2,5 +2,5 @@ language: csharp
 dist: xenial
 mono: none
 script:
- - dotnet build
+ - dotnet test
 
