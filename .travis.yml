@@ -1,6 +1,7 @@
-language: csharp
-dist: xenial
+language: csharp  
+sudo: required  
+dist: trusty  
 mono: none
-script:
- - dotnet test
-
+dotnet: 2.0.0-preview2-006497
+before_script:
+  - dotnet restore
