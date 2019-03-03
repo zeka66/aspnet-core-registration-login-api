@@ -7,6 +7,7 @@ DOCKER_PASSWORD=$3
 
 # Create publish artifact
 dotnet publish -c Release .
+cp Dockerfile bin/Release/netcoreapp2.2/publish/
 
 # Build the Docker images
 docker build -t zeka66/aspnet-core-registration-login-api:$TAG bin/Release/netcoreapp2.2/publish/.
