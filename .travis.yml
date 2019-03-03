@@ -1,3 +1,6 @@
-dist: xenial
 language: csharp
-solution: WebApi.csproj
+dist: xenial
+mono: none
+script:
+ - dotnet build
+
