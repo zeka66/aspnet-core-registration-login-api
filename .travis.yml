@@ -3,5 +3,5 @@ sudo: required
 dist: xenial  
 mono: none
 dotnet: 2.2
-before_script:
-  - dotnet restore
+script:
+  - dotnet build
